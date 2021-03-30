@@ -58,7 +58,7 @@ bootstrap:27 Uncaught ReferenceError: React is not defined
     // })
     ```
 
- ### Reference
+### Reference
  [-] https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#manual-babel-setup
  [-] https://www.robinwieruch.de/minimal-react-webpack-babel-setup
 
