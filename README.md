@@ -46,9 +46,20 @@ bootstrap:27 Uncaught ReferenceError: React is not defined
     at workLoopSync (react-dom.development.js:22707)
  ```
 
+## 主要碰到的问题
+1. babel config中"runtime"未设置为"automatic"的问题
+2. ReferenceError: process is not defined,使用如下方式解决
+```
+// new webpack.DefinePlugin({
+    //   'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    //   'process.env.WDS_SOCKET_HOST': JSON.stringify(process.env.WDS_SOCKET_HOST),
+    //   'process.env.WDS_SOCKET_PORT': JSON.stringify(process.env.WDS_SOCKET_PORT),
+    //   'process.env.WDS_SOCKET_PATH': JSON.stringify(process.env.WDS_SOCKET_PATH),
+    // })
+    ```
 
  ### Reference
  [-] https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#manual-babel-setup
  [-] https://www.robinwieruch.de/minimal-react-webpack-babel-setup
 
-  
+
